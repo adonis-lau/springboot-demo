@@ -5,6 +5,7 @@ import bid.adonis.lau.entity.City;
 import bid.adonis.lau.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ import java.util.List;
  * @Date Created in 2017/9/4 16:33
  */
 @Service
+@Transactional
 public class CityServiceImpl implements CityService {
 
     @Autowired
