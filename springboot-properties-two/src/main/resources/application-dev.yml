@@ -1,0 +1,10 @@
+home:
+  province: ZheJiang
+  city: WenLing
+  desc: "dev : I'm living in ${home.province} ${home.city}."
+
+user:
+  id: ${random.long}
+  age: ${random.int[1,200]}
+  desc: 泥瓦匠叫做${random.value}
+  uuid: ${random.uuid}

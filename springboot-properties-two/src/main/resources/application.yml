@@ -1,0 +1,11 @@
+# 记得冒号与值之间有个空格，换行之后每行增加两个空格
+
+#Tomcat Settings
+server:
+  port: 8080
+  context-path: /springboot
+
+# Spring Profiles Active
+spring:
+  profiles:
+    active: dev

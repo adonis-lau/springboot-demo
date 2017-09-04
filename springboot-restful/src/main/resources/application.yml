@@ -1,0 +1,18 @@
+#Server Setting
+server:
+  context-path: /springboot
+  port: 8080
+
+#Spring Boot Setting
+spring:
+  #datasource setting
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_demo
+    username: root
+    password: 546085758
+  #hibernate setting
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
