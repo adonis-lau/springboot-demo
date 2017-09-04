@@ -42,6 +42,11 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- Spring Boot Freemarker 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
         <!-- Spring Boot AOP 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -85,6 +90,9 @@
         <!-- 基础 - Web 业务开发篇 -->
         <!-- Spring Boot 实现 Restful 服务，基于 HTTP / JSON 传输 -->
         <module>springboot-restful</module>
+        <!-- Spring Boot 集成 FreeMarker -->
+        <module>springboot-freemarker</module>
+
     </modules>
 
     <!-- 设定主仓库，按设定顺序进行查找。 -->
