@@ -1,0 +1,4 @@
+#Server Setting
+server:
+  context-path: /springboot
+  port: 8080

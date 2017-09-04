@@ -1,4 +1,4 @@
-package bid.adonis.lau.web;
+package bid.adonis.lau.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date Created in 2017/8/31 23:24
  */
 @RestController
-@RequestMapping("/first/")
+@RequestMapping("/first")
 public class HelloWorldController {
 
-    @GetMapping("hello")
+    @GetMapping("/hello")
     public String hello(){
         return "Hello World !";
     }

@@ -42,32 +42,20 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-        <!-- Spring Boot Freemarker 依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-freemarker</artifactId>
-        </dependency>
+
         <!-- Spring Boot AOP 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-        <!-- Spring Boot JPA(Hibername) 依赖 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+
         <!-- Spring Boot Mybatis 依赖 -->
         <!--<dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.2.0</version>
         </dependency>-->
-        <!-- MySQL 连接驱动依赖 -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+
         <!--Junit4-->
         <dependency>
             <groupId>junit</groupId>
@@ -92,6 +80,8 @@
         <module>springboot-restful</module>
         <!-- Spring Boot 集成 FreeMarker -->
         <module>springboot-freemarker</module>
+        <!-- Spring Boot HTTP over JSON 的错误码异常处理 -->
+        <module>springboot-validation-over-json</module>
 
     </modules>
 

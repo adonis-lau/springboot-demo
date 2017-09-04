@@ -19,27 +19,27 @@ public class CityRestController {
     @Autowired
     private CityService cityService;
 
-    @GetMapping(value = "/city/{id}")
+    @GetMapping("/city/{id}")
     public City findOneCity(@PathVariable("id") Long id) {
         return cityService.findCityById(id);
     }
 
-    @GetMapping(value = "/city")
+    @GetMapping("/city")
     public List<City> findAllCity() {
         return cityService.findAllCity();
     }
 
-    @PostMapping(value = "/city")
+    @PostMapping("/city")
     public void createCity(@RequestBody City city) {
         cityService.saveCity(city);
     }
 
-    @PutMapping(value = "/city")
+    @PutMapping("/city")
     public void modifyCity(@RequestBody City city) {
         cityService.updateCity(city);
     }
 
-    @DeleteMapping(value = "/city/{id}")
+    @DeleteMapping("/city/{id}")
     public void modifyCity(@PathVariable("id") Long id) {
         cityService.deleteCity(id);
     }
