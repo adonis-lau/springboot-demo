@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Eamil adonis.lau.dev@gmail.com
  * @Date Created in 2017/8/31 23:24
  */
+// @RestController 所有函数不解析返回的字符串
 @RestController
 @RequestMapping("/first")
 public class HelloWorldController {

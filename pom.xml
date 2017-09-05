@@ -22,7 +22,31 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <druid>1.0.20</druid>
     </properties>
+
+    <modules>
+        <!-- 基础 – 入门篇 -->
+        <!-- Spring Boot 之 HelloWorld 详解 -->
+        <module>springboot-helloworld</module>
+        <!-- Spring Boot 之配置文件详解 -->
+        <module>springboot-properties-one</module>
+        <module>springboot-properties-two</module>
+
+        <!-- 基础 - Web 业务开发篇 -->
+        <!-- Spring Boot 实现 Restful 服务，基于 HTTP / JSON 传输 -->
+        <module>springboot-restful</module>
+        <!-- Spring Boot 集成 FreeMarker -->
+        <module>springboot-freemarker</module>
+        <!-- Spring Boot HTTP over JSON 的错误码异常处理 -->
+        <module>springboot-validation-over-json</module>
+
+        <!-- 基础 – 数据存储篇 -->
+        <!-- Spring Boot 整合 Hibername Durid 的完整 Web 案例 -->
+        <module>springboot-hibernate-druid</module>
+        <!-- Spring Boot 整合 Hibername Durid 多数据源的完整 Web 案例 -->
+        <module>springboot-hibernate-mutil-datasource</module>
+    </modules>
 
     <dependencies>
         <!-- Spring Boot Web 依赖 -->
@@ -49,12 +73,29 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
+        <!--Spring Boot 热部署-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>false</optional>
+        </dependency>
+
         <!-- Spring Boot Mybatis 依赖 -->
         <!--<dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.2.0</version>
         </dependency>-->
+
+        <!-- 添加对jsp视图解析的支持 -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
 
         <!--Junit4-->
         <dependency>
@@ -67,23 +108,18 @@
         </dependency>
     </dependencies>
 
-    <modules>
-        <!-- 基础 – 入门篇 -->
-        <!-- Spring Boot 之 HelloWorld 详解 -->
-        <module>springboot-helloworld</module>
-        <!-- Spring Boot 之配置文件详解 -->
-        <module>springboot-properties-one</module>
-        <module>springboot-properties-two</module>
 
-        <!-- 基础 - Web 业务开发篇 -->
-        <!-- Spring Boot 实现 Restful 服务，基于 HTTP / JSON 传输 -->
-        <module>springboot-restful</module>
-        <!-- Spring Boot 集成 FreeMarker -->
-        <module>springboot-freemarker</module>
-        <!-- Spring Boot HTTP over JSON 的错误码异常处理 -->
-        <module>springboot-validation-over-json</module>
-
-    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <!-- 设定主仓库，按设定顺序进行查找。 -->
     <repositories>
@@ -107,12 +143,4 @@
 
     </pluginRepositories>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>

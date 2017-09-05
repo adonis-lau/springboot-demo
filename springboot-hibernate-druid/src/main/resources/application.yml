@@ -1,0 +1,43 @@
+#Server Setting
+server:
+  context-path: /springboot
+  port: 8080
+
+#Spring Boot Setting
+spring:
+  #datasource setting
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_demo?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 546085758
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  #hibernate setting
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  #freemarker setting
+  freemarker:
+    template-loader-path: classpath:/templates/
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl
