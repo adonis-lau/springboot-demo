@@ -1,0 +1,11 @@
+#Server Setting
+#server:
+#  context-path: /springboot
+#  port: 8080
+
+#JSP Setting
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
