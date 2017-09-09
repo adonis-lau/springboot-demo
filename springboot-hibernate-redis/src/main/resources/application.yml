@@ -1,0 +1,30 @@
+#Server Setting
+server:
+  context-path: /springboot
+  port: 8080
+
+#Spring Boot Setting
+spring:
+  #datasource setting
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_demo?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 546085758
+  #hibernate setting
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  #Redis Settings
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 0

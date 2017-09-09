@@ -48,6 +48,10 @@
         <module>springboot-hibernate-druid</module>
         <!-- Spring Boot 整合 Hibername Durid 多数据源的完整 Web 案例 -->
         <module>springboot-hibernate-mutil-datasource</module>
+
+        <!-- 基础 – 数据缓存篇 -->
+        <!-- Spring Boot 整合 Redis 实现缓存 -->
+        <module>springboot-hibernate-redis</module>
     </modules>
 
     <dependencies>
@@ -81,13 +85,6 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>false</optional>
         </dependency>
-
-        <!-- Spring Boot Mybatis 依赖 -->
-        <!--<dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>1.2.0</version>
-        </dependency>-->
 
         <!--Junit4-->
         <dependency>
