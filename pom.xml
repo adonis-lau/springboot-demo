@@ -52,6 +52,8 @@
         <!-- 基础 – 数据缓存篇 -->
         <!-- Spring Boot 整合 Redis 实现缓存 -->
         <module>springboot-hibernate-redis</module>
+        <!-- Spring Boot 注解实现整合 Redis 实现缓存 -->
+        <module>springboot-hibernate-redis-annotation</module>
     </modules>
 
     <dependencies>
