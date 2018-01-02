@@ -36,6 +36,7 @@ public class CityServiceImpl implements CityService {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Override
     public List<City> findAllCity() {
         return cityDao.findAll();
     }

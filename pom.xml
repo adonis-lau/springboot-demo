@@ -116,8 +116,8 @@
     <repositories>
 
         <repository>
-            <id>jeesite-repos</id>
-            <name>Jeesite Repository</name>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
         </repository>
 
@@ -127,8 +127,8 @@
     <pluginRepositories>
 
         <pluginRepository>
-            <id>jeesite-repos</id>
-            <name>Jeesite Repository</name>
+            <id>nexus-aliyun</id>
+            <name>Nexus aliyun</name>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
         </pluginRepository>
 
