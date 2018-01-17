@@ -1,8 +1,12 @@
-## Dubbo 服务提供者配置
+## 避免和 server 工程端口冲突
+server:
+  port: 8081
+
+## Dubbo 服务消费者配置
 spring:
   dubbo:
     application:
-      name: provider
+      name: consumer
     registry:
       address: zookeeper://liudeshuai.cn:2181
     protocol:
