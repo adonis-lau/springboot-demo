@@ -17,10 +17,10 @@ public interface CityDao extends JpaRepository<City, Long> {
 
     /**
      * 根据城市名称，查询城市信息
+     * Hibernate查询，不需要实现，但是函数名必须按照规范来写
      *
      * @param cityName
      * @return City
      */
-    //Hibernate查询，不需要实现，但是函数名必须按照规范来写
     City findCityByCityName(String cityName);
 }

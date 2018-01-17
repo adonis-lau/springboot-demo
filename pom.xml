@@ -22,7 +22,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <druid>1.0.20</druid>
+        <druid>1.1.6</druid>
+        <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
     </properties>
 
     <modules>
@@ -54,6 +55,14 @@
         <module>springboot-hibernate-redis</module>
         <!-- Spring Boot 注解实现整合 Redis 实现缓存 -->
         <module>springboot-hibernate-redis-annotation</module>
+
+        <!-- 其他篇 -->
+        <!-- Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例 -->
+        <module>springboot-dubbo-server</module>
+        <module>springboot-dubbo-client</module>
+
+        <!-- Spring Boot 打成 war 包 -->
+        <module>springboot-war</module>
     </modules>
 
     <dependencies>
