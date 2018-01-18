@@ -6,7 +6,7 @@ spring:
     registry:
       address: zookeeper://liudeshuai.cn:2181
     protocol:
-      host: home
+      host: 127.0.0.1
       name: dubbo
       port: 20880
     scan: bid.adonis.lau.dubbo

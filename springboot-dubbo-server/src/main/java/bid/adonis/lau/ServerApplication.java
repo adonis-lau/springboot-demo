@@ -11,11 +11,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date: Created in 2018/1/17 22:22
  */
 @SpringBootApplication
-public class SpringbootApplication {
+public class ServerApplication {
 
     public static void main(String[] args) {
         // 程序启动入口
         // 启动嵌入式的 Tomcat 并初始化 Spring 环境及其各 Spring 组件
-        SpringApplication.run(SpringbootApplication.class, args);
+        SpringApplication.run(ServerApplication.class, args);
     }
 }
