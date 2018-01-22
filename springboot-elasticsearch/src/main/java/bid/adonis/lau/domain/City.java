@@ -1,5 +1,7 @@
 package bid.adonis.lau.domain;
 
+import org.springframework.data.elasticsearch.annotations.Document;
+
 import java.io.Serializable;
 
 /**
@@ -7,8 +9,9 @@ import java.io.Serializable;
  *
  * @author: adonis lau
  * @email: adonis.lau.dev@gmail.com
- * @date: Created in 2018/1/22 22:19
+ * @date: Created in 2018/1/22 22:18
  */
+@Document(indexName = "cityindex", type = "city")
 public class City implements Serializable {
 
     private static final long serialVersionUID = -1L;
@@ -21,27 +24,17 @@ public class City implements Serializable {
     /**
      * 省份编号
      */
-    private Long provinceId;
+    private Long provinceid;
 
     /**
      * 城市名称
      */
-    private String cityName;
+    private String cityname;
 
     /**
      * 描述
      */
     private String description;
-
-    public City() {
-    }
-
-    public City(Long id, Long provinceId, String cityName, String description) {
-        this.id = id;
-        this.provinceId = provinceId;
-        this.cityName = cityName;
-        this.description = description;
-    }
 
     public Long getId() {
         return id;
@@ -51,20 +44,20 @@ public class City implements Serializable {
         this.id = id;
     }
 
-    public Long getProvinceId() {
-        return provinceId;
+    public Long getProvinceid() {
+        return provinceid;
     }
 
-    public void setProvinceId(Long provinceId) {
-        this.provinceId = provinceId;
+    public void setProvinceid(Long provinceid) {
+        this.provinceid = provinceid;
     }
 
-    public String getCityName() {
-        return cityName;
+    public String getCityname() {
+        return cityname;
     }
 
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
+    public void setCityname(String cityname) {
+        this.cityname = cityname;
     }
 
     public String getDescription() {
