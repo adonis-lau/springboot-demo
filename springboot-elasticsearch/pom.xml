@@ -38,7 +38,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>${druid}</version>
+            <version>${druid.version}</version>
         </dependency>
     </dependencies>
     

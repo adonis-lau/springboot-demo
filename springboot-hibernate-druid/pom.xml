@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>${druid}</version>
+            <version>${druid.version}</version>
         </dependency>
         <!-- Spring Boot Freemarker 依赖 -->
         <dependency>
