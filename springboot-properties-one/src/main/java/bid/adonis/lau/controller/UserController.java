@@ -14,11 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+    private final UserProperties userProperties;
+
     @Autowired
-    UserProperties userProperties;
+    public UserController(UserProperties userProperties) {
+        this.userProperties = userProperties;
+    }
 
     @GetMapping("/properties")
-    public String properties(){
+    public String properties() {
         return userProperties.toString();
     }
 }

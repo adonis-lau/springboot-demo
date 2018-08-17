@@ -20,15 +20,19 @@ import java.util.List;
 @Transactional
 public class CityServiceImpl implements CityService {
 
+    private final CityDao cityDao;
+
     @Autowired
-    private CityDao cityDao;
+    public CityServiceImpl(CityDao cityDao) {
+        this.cityDao = cityDao;
+    }
 
     public List<City> findAllCity() {
         return cityDao.findAll();
     }
 
     public City findCityById(Long id) {
-        return cityDao.findOne(id);
+        return cityDao.findById(id).orElse(null);
     }
 
     @Override
@@ -43,7 +47,7 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public void deleteCity(Long id) {
-        cityDao.delete(id);
+        cityDao.deleteById(id);
     }
 
 }

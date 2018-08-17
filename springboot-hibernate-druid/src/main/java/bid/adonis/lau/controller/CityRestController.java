@@ -20,8 +20,12 @@ import java.util.List;
 @RequestMapping("/api")
 public class CityRestController {
 
+    private final CityService cityService;
+
     @Autowired
-    private CityService cityService;
+    public CityRestController(CityService cityService) {
+        this.cityService = cityService;
+    }
 
     @GetMapping("/city/{id}")
     public String findOneCity(Model model, @PathVariable("id") Long id) {

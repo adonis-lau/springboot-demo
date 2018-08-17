@@ -27,11 +27,15 @@ public class CityServiceImpl implements CityService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
-    private CityDao cityDao;
+    private final CityDao cityDao;
+
+    private final RedisTemplate redisTemplate;
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    public CityServiceImpl(CityDao cityDao, RedisTemplate redisTemplate) {
+        this.cityDao = cityDao;
+        this.redisTemplate = redisTemplate;
+    }
 
     public List<City> findAllCity() {
         return cityDao.findAll();
@@ -56,11 +60,11 @@ public class CityServiceImpl implements CityService {
         }
 
         // 从 DB 中获取城市信息
-        City city = cityDao.findOne(id);
+        City city = cityDao.findById(id).orElse(null);
 
         // 插入缓存
         operations.set(key, city, 10L, TimeUnit.SECONDS);
-        logger.info("CityServiceImpl.findCityById() : 城市插入缓存 >> " + city.toString());
+        logger.info("CityServiceImpl.findCityById() : 城市插入缓存 >> " + (city != null ? city.toString() : null));
 
         return city;
     }
@@ -91,7 +95,7 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public void deleteCity(Long id) {
-        cityDao.delete(id);
+        cityDao.deleteById(id);
 
         //如果缓存存在，删除缓存
         String key = "city_" + id;

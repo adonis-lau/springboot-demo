@@ -10,7 +10,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>bid.adonis.lau</groupId>
     <artifactId>springboot-hibernate-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-hibernate-redis :: 整合 Hibernate 并使用 Redis 作为缓存</name>

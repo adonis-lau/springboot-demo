@@ -15,11 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/home")
 public class HomeController {
 
+    private final HomeProperties homeProperties;
+
     @Autowired
-    HomeProperties homeProperties;
+    public HomeController(HomeProperties homeProperties) {
+        this.homeProperties = homeProperties;
+    }
 
     @GetMapping("/properties")
-    public String properties(){
+    public String properties() {
         return homeProperties.toString();
     }
 }

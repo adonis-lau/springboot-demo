@@ -10,7 +10,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>bid.adonis.lau</groupId>
     <artifactId>springboot-hibernate-druid</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-hibernate-druid :: Spring Boot 实现 Hibernate Druid 配置</name>

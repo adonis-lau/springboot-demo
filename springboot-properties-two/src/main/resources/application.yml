@@ -3,7 +3,8 @@
 #Tomcat Settings
 server:
   port: 8080
-  context-path: /springboot
+  servlet:
+    context-path: /springboot
 
 # Spring Profiles Active
 spring:

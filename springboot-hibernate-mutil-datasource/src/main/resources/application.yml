@@ -1,6 +1,7 @@
 #Server Setting
 server:
-  context-path: /springboot
+  servlet:
+    context-path: /springboot
   port: 8080
 
 #Spring Boot Setting
@@ -48,6 +49,9 @@ spring:
       maxOpenPreparedStatements: 20
   #hibernate setting
   jpa:
+    generate-ddl: true
+    show-sql: true
     hibernate:
       ddl-auto: update
-    show-sql: true
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy

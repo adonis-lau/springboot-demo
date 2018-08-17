@@ -18,8 +18,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class CityServiceImpl implements CityService {
 
+    private final CityDao cityDao;
+
     @Autowired
-    private CityDao cityDao;
+    public CityServiceImpl(CityDao cityDao) {
+        this.cityDao = cityDao;
+    }
 
     @Override
     public City findCityByCityName(String cityName) {

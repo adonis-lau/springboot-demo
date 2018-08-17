@@ -10,15 +10,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * User Controller 实现 Restful HTTP 服务
- * <p>
- * Created by bysocket on 07/02/2017.
+ *
+ * @author: Adonis Lau
+ * @date: 2018/8/17 16:27
  */
 @RestController
 @RequestMapping("/api/user")
 public class UserRestController {
 
+    private final UserService userService;
+
     @Autowired
-    private UserService userService;
+    public UserRestController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("")
     public User findOneCity(@RequestParam(value = "name", required = true) String name) {

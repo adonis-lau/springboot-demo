@@ -10,7 +10,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>bid.adonis.lau</groupId>
     <artifactId>springboot-war</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>

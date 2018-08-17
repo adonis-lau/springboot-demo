@@ -2,6 +2,7 @@ package bid.adonis.lau.config.datasource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
@@ -47,7 +48,7 @@ public class MasterDataSourceConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryMaster(EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(masterDataSource)
-                .properties(getVendorProperties(masterDataSource))
+                .properties(getVendorProperties())
                 .packages(new String[]{"bid.adonis.lau.entity.master"}) //设置实体类所在包名
                 .persistenceUnit("masterPersistenceUnit")
                 .build();
@@ -58,8 +59,8 @@ public class MasterDataSourceConfig {
     private JpaProperties jpaProperties;
 
     //获取jpa配置信息
-    private Map<String, String> getVendorProperties(DataSource dataSource) {
-        return jpaProperties.getHibernateProperties(dataSource);
+    private Map<String, Object> getVendorProperties() {
+        return jpaProperties.getHibernateProperties(new HibernateSettings());
     }
 
     //配置事务

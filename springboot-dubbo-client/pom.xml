@@ -19,7 +19,7 @@
         <dependency>
             <groupId>io.dubbo.springboot</groupId>
             <artifactId>spring-boot-starter-dubbo</artifactId>
-            <version>${dubbo-spring-boot}</version>
+            <version>${dubbo.springboot.version}</version>
         </dependency>
     </dependencies>
 

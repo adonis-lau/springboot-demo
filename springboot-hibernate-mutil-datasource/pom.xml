@@ -10,7 +10,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>bid.adonis.lau</groupId>
     <artifactId>springboot-hibernate-mutil-datasource</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-hibernate-mutil-datasource :: Spring Boot 实现 Hibernate Druid 多数据源配置</name>

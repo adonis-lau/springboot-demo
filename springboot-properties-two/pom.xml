@@ -10,7 +10,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>bid.adonis.lau</groupId>
     <artifactId>springboot-properties-two</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-properties-two :: Spring boot 配置文件2</name>

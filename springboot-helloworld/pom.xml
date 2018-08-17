@@ -10,7 +10,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>bid.adonis.lau</groupId>
     <artifactId>springboot-helloworld</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-helloworld :: HelloWorld Demo</name>

@@ -15,17 +15,22 @@ import java.util.List;
  * @date: Created in 2018/1/22 22:18
  */
 @RestController
+@RequestMapping(value = "/api/city")
 public class CityRestController {
 
-    @Autowired
-    private CityService cityService;
+    private final CityService cityService;
 
-    @RequestMapping(value = "/api/city", method = RequestMethod.POST)
+    @Autowired
+    public CityRestController(CityService cityService) {
+        this.cityService = cityService;
+    }
+
+    @RequestMapping(value = "", method = RequestMethod.POST)
     public Long createCity(@RequestBody City city) {
         return cityService.saveCity(city);
     }
 
-    @RequestMapping(value = "/api/city/search", method = RequestMethod.GET)
+    @RequestMapping(value = "/search", method = RequestMethod.GET)
     public List<City> searchCity(@RequestParam(value = "pageNumber") Integer pageNumber,
                                  @RequestParam(value = "pageSize", required = false) Integer pageSize,
                                  @RequestParam(value = "searchContent") String searchContent) {

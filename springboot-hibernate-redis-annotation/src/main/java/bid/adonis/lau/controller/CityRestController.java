@@ -9,15 +9,20 @@ import java.util.List;
 
 /**
  * 城市 Controller 实现 Restful HTTP 服务
- * <p>
- * Created by bysocket on 07/02/2017.
+ *
+ * @author: Adonis Lau
+ * @date: 2018/8/17 16:33
  */
 @RestController
 @RequestMapping("/api")
 public class CityRestController {
 
+    private final CityService cityService;
+
     @Autowired
-    private CityService cityService;
+    public CityRestController(CityService cityService) {
+        this.cityService = cityService;
+    }
 
     @GetMapping("/city/{id}")
     public City findOneCity(@PathVariable("id") Long id) {

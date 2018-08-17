@@ -30,12 +30,15 @@ public class CityESServiceImpl implements CityService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CityESServiceImpl.class);
 
+    private final CityRepository cityRepository;
+
     @Autowired
-    CityRepository cityRepository;
+    public CityESServiceImpl(CityRepository cityRepository) {
+        this.cityRepository = cityRepository;
+    }
 
     @Override
     public Long saveCity(City city) {
-
         City cityResult = cityRepository.save(city);
         return cityResult.getId();
     }
@@ -59,7 +62,7 @@ public class CityESServiceImpl implements CityService {
                 .withPageable(pageable)
                 .withQuery(functionScoreQueryBuilder).build();
 
-        LOGGER.info("\n searchCity(): searchContent [" + searchContent + "] \n DSL  = \n " + searchQuery.getQuery().toString());
+        LOGGER.info("\n searchCity(): searchContent [{}] \n DSL  = \n {}", searchContent, searchQuery.getQuery().toString());
 
         Page<City> searchPageResults = cityRepository.search(searchQuery);
         return searchPageResults.getContent();

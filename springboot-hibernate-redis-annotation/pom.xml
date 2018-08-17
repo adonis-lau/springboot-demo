@@ -10,7 +10,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>bid.adonis.lau</groupId>
     <artifactId>springboot-hibernate-redis-annotation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-hibernate-redis-annotation :: 整合 Hibernate 并使用注解，以 Redis 作为缓存</name>

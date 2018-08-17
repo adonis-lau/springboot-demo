@@ -30,11 +30,15 @@ public class CityServiceImpl implements CityService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
-    private CityDao cityDao;
+    private final CityDao cityDao;
+
+    private final RedisTemplate redisTemplate;
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    public CityServiceImpl(CityDao cityDao, RedisTemplate redisTemplate) {
+        this.cityDao = cityDao;
+        this.redisTemplate = redisTemplate;
+    }
 
     @Override
     public List<City> findAllCity() {
@@ -44,7 +48,7 @@ public class CityServiceImpl implements CityService {
     @Cacheable(value = "baseCityInfo")
     @Override
     public City findCityById(Long id) {
-        return cityDao.findOne(id);
+        return cityDao.findById(id).orElse(null);
     }
 
     @CachePut(value = "baseCityInfo")
@@ -61,7 +65,7 @@ public class CityServiceImpl implements CityService {
     @CacheEvict(value = "baseCityInfo")
     @Override
     public void deleteCity(Long id) {
-        cityDao.delete(id);
+        cityDao.deleteById(id);
     }
 
 }

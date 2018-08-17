@@ -10,7 +10,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>bid.adonis.lau</groupId>
     <artifactId>springboot-restful</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-restful :: Spsringboot 实现 Restful 服务，基于 HTTP / JSON 传输 Demo</name>
