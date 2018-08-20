@@ -1,6 +1,7 @@
 #Server Setting
 #server:
-#  context-path: /springboot
+#  servlet:
+#    context-path: /springboot
 #  port: 8080
 
 #JSP Setting

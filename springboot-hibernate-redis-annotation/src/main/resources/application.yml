@@ -1,14 +1,15 @@
 #Server Setting
 server:
-  context-path: /springboot
   port: 8080
+  servlet:
+    context-path: /springboot
 
 #Spring Boot Setting
 spring:
   #datasource setting
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springboot_demo?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/springboot_demo?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 546085758
   #hibernate setting
@@ -22,9 +23,10 @@ spring:
     host: 127.0.0.1
     port: 6379
     password:
-    pool:
-      max-active: 8
-      max-wait: -1
-      max-idle: 8
-      min-idle: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
     timeout: 0
