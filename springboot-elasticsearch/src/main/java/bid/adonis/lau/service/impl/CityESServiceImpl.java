@@ -48,7 +48,7 @@ public class CityESServiceImpl implements CityService {
                                  Integer pageSize,
                                  String searchContent) {
         // 分页参数
-        Pageable pageable = new PageRequest(pageNumber, pageSize);
+        Pageable pageable = PageRequest.of(pageNumber, pageSize);
 
         // Function Score Query
         FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery()

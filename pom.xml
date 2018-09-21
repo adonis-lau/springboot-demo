@@ -133,6 +133,12 @@
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
         </repository>
 
+        <repository>
+            <id>nexus-cloudera</id>
+            <name>cloudera aliyun</name>
+            <url>https://repository.cloudera.com/content/repositories/releases/</url>
+        </repository>
+
     </repositories>
 
     <!-- 设定插件仓库 -->

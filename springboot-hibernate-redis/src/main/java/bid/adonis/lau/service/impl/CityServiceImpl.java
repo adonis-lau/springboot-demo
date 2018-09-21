@@ -37,6 +37,7 @@ public class CityServiceImpl implements CityService {
         this.redisTemplate = redisTemplate;
     }
 
+    @Override
     public List<City> findAllCity() {
         return cityDao.findAll();
     }
@@ -46,6 +47,7 @@ public class CityServiceImpl implements CityService {
      * 如果缓存存在，从缓存中获取城市信息
      * 如果缓存不存在，从 DB 中获取城市信息，然后插入缓存
      */
+    @Override
     public City findCityById(Long id) {
         // 从缓存中获取城市信息
         String key = "city_" + id;
