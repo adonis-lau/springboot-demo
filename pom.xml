@@ -66,6 +66,9 @@
 
         <!-- Spring Boot 打成 war 包 -->
         <module>springboot-war</module>
+
+        <!-- Web项目中加入https -->
+        <module>springboot-web-https</module>
     </modules>
 
     <dependencies>
@@ -126,6 +129,15 @@
 
     <!-- 设定主仓库，按设定顺序进行查找。 -->
     <repositories>
+
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
 
         <repository>
             <id>nexus-aliyun</id>

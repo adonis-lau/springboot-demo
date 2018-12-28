@@ -1,0 +1,8 @@
+#Server Setting
+server:
+  servlet:
+    context-path: /springboot
+  port: 8080
+  ssl:
+    key-store: classpath:config/tomcat.keystore
+    key-store-password: 111111
