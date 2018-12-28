@@ -1,6 +1,6 @@
 ## Dubbo 配置
 # 扫描包路径
-<br>spring.dubbo.scan=org.<br>spring.<br>springboot.dubbo
+<br>spring.dubbo.scan=org.spring.springboot.dubbo
 
 ## Dubbo 应用配置
 // 应用名称

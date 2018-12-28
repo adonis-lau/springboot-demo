@@ -17,7 +17,7 @@ import java.util.List;
  * @Date Created in 2017/9/4 16:33
  */
 @Service
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 public class CityServiceImpl implements CityService {
 
     private final CityDao cityDao;
@@ -27,10 +27,12 @@ public class CityServiceImpl implements CityService {
         this.cityDao = cityDao;
     }
 
+    @Override
     public List<City> findAllCity(){
         return cityDao.findAll();
     }
 
+    @Override
     public City findCityById(Long id) {
         return cityDao.findById(id).orElse(null);
     }
